@@ -9,6 +9,7 @@ from incluir_contato import incluir_contato, incluir_lista_contatos
 from selecionar_contatos import listar_contatos
 from filtrando_dados import filtrar_pelo_numero, filtar_pelo_nome
 from filtro_por_entrada_de_dados import filtrar_pelo_nome_entrada
+from excluir_contatos import excluir_contato_pelo_nome
 
 cnx = get_conexao()
 
@@ -18,6 +19,7 @@ if cnx is not False:
     listar_bancos_de_dados(cursor)
     cnx.close()
 
+    # Utilizando outro formato de conexão
     criar_tabelas_db_agenda()
     deletar_tabela_db_agenda()
 
@@ -34,8 +36,11 @@ if cnx is not False:
     incluir_lista_contatos(contatos)
 
     listar_contatos(5)
+
     filtrar_pelo_numero()
     filtar_pelo_nome()
-
     filtrar_pelo_nome_entrada('Hele')
+    
+    excluir_contato_pelo_nome('Lucas')
+    excluir_contato_pelo_nome('Eduarda')
     
