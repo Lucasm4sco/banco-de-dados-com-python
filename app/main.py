@@ -1,7 +1,7 @@
 from criar_banco import criar_banco
 from conexao import get_conexao
 from listar_bancos import listar_bancos_de_dados
-from criar_tabelas_db_agenda import criar_tabelas_db_agenda
+from criar_tabelas_db_agenda import criar_tabelas_db_agenda, criar_tabela_grupo_db_agenda
 from deletar_tabela_db_agenda import deletar_tabela_db_agenda
 from listar_tabelas import listar_tabelas_database
 from alterar_tabela_db_agenda import alterar_tabela_db_agenda
@@ -48,4 +48,6 @@ if cnx is not False:
 
     atualizar_nome_contato(id=4, nome_atualizado='Ana Julia')
     listar_contatos_paginacao(limite=5, offset=5)
+
+    criar_tabela_grupo_db_agenda()
     
