@@ -4,6 +4,7 @@ from listar_bancos import listar_bancos_de_dados
 from criar_tabelas_db_agenda import criar_tabelas_db_agenda
 from deletar_tabela_db_agenda import deletar_tabela_db_agenda
 from listar_tabelas import listar_tabelas_database
+from alterar_tabela_db_agenda import alterar_tabela_db_agenda
 
 cnx = get_conexao()
 
@@ -17,4 +18,5 @@ if cnx is not False:
     deletar_tabela_db_agenda()
 
     listar_tabelas_database('agenda')
+    alterar_tabela_db_agenda()
     
