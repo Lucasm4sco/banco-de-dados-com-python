@@ -7,6 +7,7 @@ from listar_tabelas import listar_tabelas_database
 from alterar_tabela_db_agenda import alterar_tabela_db_agenda
 from incluir_contato import incluir_contato, incluir_lista_contatos
 from selecionar_contatos import listar_contatos
+from filtrando_dados import filtrar_pelo_numero, filtar_pelo_nome
 
 cnx = get_conexao()
 
@@ -32,4 +33,6 @@ if cnx is not False:
     incluir_lista_contatos(contatos)
 
     listar_contatos(5)
+    filtrar_pelo_numero()
+    filtar_pelo_nome()
     
