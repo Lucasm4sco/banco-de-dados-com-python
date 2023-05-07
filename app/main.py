@@ -5,6 +5,7 @@ from criar_tabelas_db_agenda import criar_tabelas_db_agenda
 from deletar_tabela_db_agenda import deletar_tabela_db_agenda
 from listar_tabelas import listar_tabelas_database
 from alterar_tabela_db_agenda import alterar_tabela_db_agenda
+from incluir_contato import incluir_contato
 
 cnx = get_conexao()
 
@@ -19,4 +20,6 @@ if cnx is not False:
 
     listar_tabelas_database('agenda')
     alterar_tabela_db_agenda()
+
+    incluir_contato('Lucas', '90765-4321')
     
