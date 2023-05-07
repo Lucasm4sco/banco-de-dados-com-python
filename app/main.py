@@ -11,6 +11,7 @@ from filtrando_dados import filtrar_pelo_numero, filtar_pelo_nome
 from filtro_por_entrada_de_dados import filtrar_pelo_nome_entrada
 from excluir_contatos import excluir_contato_pelo_nome
 from atualizar_contato import atualizar_nome_contato
+from selecionando_com_offset import listar_contatos_paginacao
 
 cnx = get_conexao()
 
@@ -46,4 +47,5 @@ if cnx is not False:
     excluir_contato_pelo_nome('Eduarda')
 
     atualizar_nome_contato(id=4, nome_atualizado='Ana Julia')
+    listar_contatos_paginacao(limite=5, offset=5)
     
