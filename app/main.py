@@ -12,6 +12,9 @@ from filtro_por_entrada_de_dados import filtrar_pelo_nome_entrada
 from excluir_contatos import excluir_contato_pelo_nome
 from atualizar_contato import atualizar_nome_contato
 from selecionando_com_offset import listar_contatos_paginacao
+from incluir_grupos import incluir_grupos
+from associar_grupo_contato import associar_grupo_contato
+from contatos_com_grupos import listar_contatos_com_grupos
 
 cnx = get_conexao()
 
@@ -50,4 +53,7 @@ if cnx is not False:
     listar_contatos_paginacao(limite=5, offset=5)
 
     criar_tabela_grupo_db_agenda()
+    incluir_grupos()
+    associar_grupo_contato(contatos + (('Ana Julia',), ('Lucas',)))
+    listar_contatos_com_grupos()
     
